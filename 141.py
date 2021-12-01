@@ -51,18 +51,18 @@ def toparticle():
         item = item.split("\n")[1]
         flags.append(item)
 
-    showlist = []
-    show = {}
+    showlist = {}
 
     for item in cards:
+        show = {}
         i = cards.index(item)
         show["flag"] = flags[i]
         show["img"] = item
         show["magnet"] = magnets[i]
-        showlist.append(show)
-    time.sleep(10)
-
-    return showlist[random.randint(0, 9)]
+        showlist[i] = show
+    n = random.randint(0, 9)
+    time.sleep(n)
+    return showlist[n]
 
 
 if __name__ == "__main__":
