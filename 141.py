@@ -60,7 +60,8 @@ def toparticle():
         show["img"] = item
         show["magnet"] = magnets[i]
         showlist[i] = show
-    n = random.randint(0, 9)
+    m = len(flags)
+    n = random.randint(0, m)
     time.sleep(n)
     return showlist[n]
 
